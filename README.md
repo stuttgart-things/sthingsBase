@@ -28,16 +28,12 @@ module providing basic building blocks
 
   EXAMPLE USAGE:
   ```
-  Patterns := map[string]VariableDelimiter {
-    "curly":  VariableDelimiter{"{{", "}}", `\{\{(.*?)\}\}`},
-    "square": VariableDelimiter{"[[", "]]", `\[\[(.*?)\]\]`},
-  }
   ...
   yamlBytes, err := sthingsBase.RenderTemplateInline(
 	metaDataFile.template, 
 	"missingkey=zero", 
-	Patterns["curly"].begin, 
-	Patterns["curly"].end, 
+	"{{", 
+	"}}", 
 	chartData)
   
   if err != nil {
