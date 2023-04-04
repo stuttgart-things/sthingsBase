@@ -13,26 +13,20 @@ module providing basic building blocks
 
 <details><summary>RenderTemplateInline</summary>
   
-  input:
+  INPUT:
   | templateData | renderOption | delimStart | delimEnd | templateVariables         |
   |--------------|--------------|------------|----------|------------------------   |
   | string       | string       | string     | string   | map[string]interface{}   |
   |              |              |            |          |                           |
   
-  output:
+  OUTPUT:
  
-	
-  ```
-  func RenderTemplateInline(
-	templateData,
-	renderOption, 
-	delimStart, 
-	delimEnd string, 
-	templateVariables map[string]interface{}) 
-  ([]byte, error) {
-  ```
- 
-  example usage:
+  | yamlBytes | err   |
+  |-----------|-------|
+  | []byte    | error |
+  |           |       |
+
+  EXAMPLE USAGE:
   ```
   Patterns := map[string]VariableDelimiter {
     "curly":  VariableDelimiter{"{{", "}}", `\{\{(.*?)\}\}`},
