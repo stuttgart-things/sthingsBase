@@ -15,9 +15,20 @@ module providing basic building blocks
 	
   ```
   Patterns := map[string]VariableDelimiter {
-		"curly":  VariableDelimiter{"{{", "}}", `\{\{(.*?)\}\}`},
-		"square": VariableDelimiter{"[[", "]]", `\[\[(.*?)\]\]`},
-	}
+    "curly":  VariableDelimiter{"{{", "}}", `\{\{(.*?)\}\}`},
+    "square": VariableDelimiter{"[[", "]]", `\[\[(.*?)\]\]`},
+  }
+	
+  yamlBytes, err := sthingsBase.RenderTemplateInline(
+	metaDataFile.template, 
+	"missingkey=zero", 
+	Patterns["curly"].begin, 
+	Patterns["curly"].end, 
+	chartData)
+  
+  if err != nil {
+    log.Fatal(err)
+  }
   ```
   
 </details>
