@@ -13,6 +13,10 @@ module providing basic building blocks
 
 <details><summary>RenderTemplateInline</summary>
   
+  vars := map[string]interface{}{
+    "moduleName": "delicious",
+  }
+  
   INPUT:
   | templateData | renderOption | delimStart | delimEnd | templateVariables         |
   |--------------|--------------|------------|----------|------------------------   |
