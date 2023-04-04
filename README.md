@@ -13,7 +13,15 @@ module providing basic building blocks
 
 <details><summary>RenderTemplateInline</summary>
   
-  func definition:
+  input:
+  | templateData | renderOption | delimStart | delimEnd | templateVariables         |
+  |--------------|--------------|------------|----------|------------------------   |
+  | string       | string       | string     | string   | map[string]interface{}   |
+  |              |              |            |          |                           |
+  
+  output:
+ 
+	
   ```
   func RenderTemplateInline(
 	templateData,
