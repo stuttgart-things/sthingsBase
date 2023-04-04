@@ -12,13 +12,25 @@ module providing basic building blocks
 ### Templating
 
 <details><summary>RenderTemplateInline</summary>
-	
+  
+  func definition:
+  ```
+  func RenderTemplateInline(
+	templateData,
+	renderOption, 
+	delimStart, 
+	delimEnd string, 
+	templateVariables map[string]interface{}) 
+  ([]byte, error) {
+  ```
+ 
+  example usage:
   ```
   Patterns := map[string]VariableDelimiter {
     "curly":  VariableDelimiter{"{{", "}}", `\{\{(.*?)\}\}`},
     "square": VariableDelimiter{"[[", "]]", `\[\[(.*?)\]\]`},
   }
-	
+  ...
   yamlBytes, err := sthingsBase.RenderTemplateInline(
 	metaDataFile.template, 
 	"missingkey=zero", 
