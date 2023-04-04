@@ -14,3 +14,13 @@ module providing basic building blocks
 <details><summary>RenderTemplateInline</summary>
   tbd!
 </details>
+
+License
+-------
+
+BSD
+
+Author Information
+------------------
+
+Patrick Hermann, stuttgart-things 04/2023
