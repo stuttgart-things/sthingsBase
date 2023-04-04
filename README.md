@@ -12,7 +12,14 @@ module providing basic building blocks
 ### Templating
 
 <details><summary>RenderTemplateInline</summary>
-  tbd!
+	
+  ```
+  Patterns := map[string]VariableDelimiter {
+		"curly":  VariableDelimiter{"{{", "}}", `\{\{(.*?)\}\}`},
+		"square": VariableDelimiter{"[[", "]]", `\[\[(.*?)\]\]`},
+	}
+  ```
+  
 </details>
 
 License
