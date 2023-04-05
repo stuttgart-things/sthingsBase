@@ -1,7 +1,7 @@
 # sthingsBase
 module providing basic building blocks
 
-## Functions
+## FUNCTIONS
 
 ### Regex
 
@@ -46,6 +46,10 @@ module providing basic building blocks
   ```
   
 </details>
+
+TASKFILE
+-------
+* TAG
 
 License
 -------
