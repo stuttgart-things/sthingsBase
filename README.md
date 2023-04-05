@@ -19,6 +19,7 @@ require (
 </details>
 
 <details><code.go</summary>
+	
 ```
 package xy
 
@@ -28,6 +29,7 @@ import (
   ..
 )	
 ```
+
 </details>
 
 ## FUNCTIONS
