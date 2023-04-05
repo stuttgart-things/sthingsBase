@@ -6,6 +6,7 @@ package base
 
 import (
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -28,4 +29,15 @@ func WriteDataToFile(outputFilePath, outputData string) bool {
 	}
 
 	return true
+}
+
+func ReadFileToVariable(filePath string) string {
+
+	content, err := os.ReadFile(filePath)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return string(content)
 }
