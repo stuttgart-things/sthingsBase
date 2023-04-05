@@ -18,7 +18,7 @@ require (
 
 </details>
 
-<details><code.go</summary>
+<details><summary>code.go</summary>
 	
 ```
 package xy
