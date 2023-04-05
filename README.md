@@ -12,16 +12,13 @@ module providing basic building blocks
 ### Templating
 
 <details><summary>RenderTemplateInline</summary>
-  
-  vars := map[string]interface{}{
-    "moduleName": "delicious",
-  }
-  
+ 
   INPUT:
+ 
   | templateData | renderOption | delimStart | delimEnd | templateVariables         |
   |--------------|--------------|------------|----------|------------------------   |
   | string       | string       | string     | string   | map[string]interface{}   |
-  |              |              |            |          |                           |
+  | hello {{ .name }}   | "missingkey=zero"    | "{{"        |  "}}"     | vars:= map[string]interface{}{"name": "delicious",}                        
   
   OUTPUT:
  
