@@ -51,7 +51,7 @@ import (
   tbd!
 </details>
 
-<details><summary>WriteDataToFile</summary>
+<details><summary>StoreVariableInFile</summary>
   tbd!
 </details>
 
