@@ -4,6 +4,7 @@ module providing basic building blocks
 ## IMPORT
 
 <details><summary>go.mod</summary>
+	
 ```
 module github..
 go 1.20
@@ -14,6 +15,7 @@ require (
   ..
 )
 ```
+
 </details>
 
 <details><summary>CreateNestedDirectoryStructure</summary>
