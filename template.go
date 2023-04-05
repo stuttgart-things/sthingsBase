@@ -6,7 +6,7 @@ package base
 
 import (
 	"bytes"
-	"html/template"
+	"text/template"
 )
 
 func RenderTemplateInline(templateData, renderOption, delimStart, delimEnd string, templateVariables map[string]interface{}) ([]byte, error) {
