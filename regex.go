@@ -12,11 +12,11 @@ import (
 func GetRegexSubMatch(scanText, regexPattern string) (string, bool) {
 
 	rgx := regexp.MustCompile(regexPattern)
-	rs := rgx.FindStringSubmatch(scanText)
+	regexSubMatch := rgx.FindStringSubmatch(scanText)
 
-	if len(rs) == 0 {
+	if len(regexSubMatch) == 0 {
 		return "", false
 	}
 
-	return strings.Trim(rs[1], " "), true
+	return strings.Trim(regexSubMatch[1], " "), true
 }
