@@ -10,7 +10,7 @@ import (
 	"os"
 )
 
-func StoreVaribaleInFile(outputFilePath, outputData string) bool {
+func StoreVariableInFile(outputFilePath, outputData string) bool {
 
 	f, err := os.Create(outputFilePath)
 
