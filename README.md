@@ -18,8 +18,16 @@ require (
 
 </details>
 
-<details><summary>CreateNestedDirectoryStructure</summary>
-  tbd!
+<details><code.go</summary>
+```
+package xy
+
+import (
+  ..
+  sthingsBase "github.com/stuttgart-things/sthingsBase"
+  ..
+)	
+```
 </details>
 
 ## FUNCTIONS
