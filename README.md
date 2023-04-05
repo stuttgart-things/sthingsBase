@@ -34,6 +34,19 @@ import (
 
 ## FUNCTIONS
 
+### LOGGING
+
+<details><summary>StdOutFileLogger</summary>
+  tbd!
+
+  EXAMPLE USAGE:
+  ```
+  log := sthingsBase.StdOutFileLogger(logfilePath, "2006-01-02 15:04:05", 50, 3, 28)
+  ..
+  log.Info("gRPC server running on port " + serverPort)  
+  ```
+</details>
+
 ### FILESYSTEM
 
 <details><summary>CreateNestedDirectoryStructure</summary>
