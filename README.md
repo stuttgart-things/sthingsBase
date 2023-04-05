@@ -38,12 +38,12 @@ import (
 
 <details><summary>CreateNestedDirectoryStructure</summary>
   tbd!
-</details>
 
   EXAMPLE USAGE:
   ```
   sthingsBase.CreateNestedDirectoryStructure("/tmp/terraform", 0777)
   ```
+</details>
 
 ### FILE
 
