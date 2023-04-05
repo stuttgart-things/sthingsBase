@@ -47,6 +47,10 @@ import (
 
 ### FILE
 
+<details><summary>ReadFileToVariable</summary>
+  tbd!
+</details>
+
 <details><summary>WriteDataToFile</summary>
   tbd!
 </details>
