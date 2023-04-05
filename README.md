@@ -3,13 +3,19 @@ module providing basic building blocks
 
 ## FUNCTIONS
 
-### Regex
+### FILE
+
+<details><summary>WriteDataToFile</summary>
+  tbd!
+</details>
+
+### REGEX
 
 <details><summary>GetRegexSubMatch</summary>
   tbd!
 </details>
 
-### Templating
+### TEMPLATING
 
 <details><summary>RenderTemplateInline</summary>
  
