@@ -74,6 +74,10 @@ import (
   tbd!
 </details>
 
+<details><summary>GetAllRegexMatches</summary>
+  tbd!
+</details>
+
 ### TEMPLATING
 
 <details><summary>RenderTemplateInline</summary>
