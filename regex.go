@@ -20,3 +20,9 @@ func GetRegexSubMatch(scanText, regexPattern string) (string, bool) {
 
 	return strings.Trim(regexSubMatch[1], " "), true
 }
+
+func GetAllRegexMatches(scanText, regexPattern string) []string {
+
+	rgx := regexp.MustCompile(regexPattern)
+	return rgx.FindAllString(scanText, -1)
+}
