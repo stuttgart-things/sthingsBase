@@ -34,6 +34,10 @@ import (
 
 ## FUNCTIONS
 
+### CONVERTING
+
+ConvertIntegerToString
+
 ### LOGGING
 
 <details><summary>StdOutFileLogger</summary>
