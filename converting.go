@@ -12,3 +12,14 @@ func ConvertIntegerToString(inputNumber int) (outputNumber string) {
 
 	return
 }
+
+func ConvertStringToInteger(inputNumber string) (outputNumber int) {
+
+	outputNumber, err := strconv.Atoi(inputNumber)
+
+	if err != nil {
+		return
+	}
+
+	return
+}
