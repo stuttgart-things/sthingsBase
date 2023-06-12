@@ -61,3 +61,15 @@ func VerifyIfFileOrDirExists(filePath, kind string) (bool, error) {
 
 	return false, err
 }
+
+func DeleteFile(filePath string) bool {
+
+	err := os.Remove(filePath)
+
+	if err != nil {
+		return false
+	} else {
+		return true
+	}
+
+}
