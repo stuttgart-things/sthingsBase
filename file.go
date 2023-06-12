@@ -41,3 +41,23 @@ func ReadFileToVariable(filePath string) string {
 
 	return string(content)
 }
+
+/*
+checks if a file exists or not
+use w/ sthingsBase.FileExists("/home/my-file.yaml")
+*/
+func VerifyIfFileOrDirExists(filePath, kind string) (bool, error) {
+	info, err := os.Stat(filePath)
+
+	// returns true if folder exists
+	if err == nil && kind == "dir" {
+		return info.IsDir(), nil
+	}
+
+	// returns true if file exists
+	if info != nil && kind == "file" {
+		return true, nil
+	}
+
+	return false, err
+}
