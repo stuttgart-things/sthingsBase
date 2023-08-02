@@ -4,7 +4,10 @@ Copyright © 2023 Patrick Hermann patrick.hermann@sva.de
 
 package base
 
-import "strconv"
+import (
+	"log"
+	"strconv"
+)
 
 func ConvertIntegerToString(inputNumber int) (outputNumber string) {
 
@@ -19,6 +22,16 @@ func ConvertStringToInteger(inputNumber string) (outputNumber int) {
 
 	if err != nil {
 		return
+	}
+
+	return
+}
+
+func ConvertStringToBoolean(trueOrFalse string) (boolValue bool) {
+
+	boolValue, err := strconv.ParseBool(trueOrFalse)
+	if err != nil {
+		log.Fatal(err)
 	}
 
 	return
