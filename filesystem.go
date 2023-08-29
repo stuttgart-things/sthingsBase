@@ -106,3 +106,24 @@ func DeleteFile(filePath string) bool {
 	}
 
 }
+
+func WriteDataToFile(outputFilePath, outputData string) bool {
+
+	f, err := os.Create(outputFilePath)
+
+	if err != nil {
+		log.Fatal(err)
+		return false
+	}
+
+	defer f.Close()
+
+	_, err2 := f.WriteString(outputData)
+
+	if err2 != nil {
+		log.Fatal(err2)
+		return false
+	}
+
+	return true
+}
