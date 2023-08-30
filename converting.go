@@ -5,6 +5,7 @@ Copyright © 2023 Patrick Hermann patrick.hermann@sva.de
 package base
 
 import (
+	"encoding/base64"
 	"log"
 	"strconv"
 )
@@ -35,4 +36,9 @@ func ConvertStringToBoolean(trueOrFalse string) (boolValue bool) {
 	}
 
 	return
+}
+
+func VerifyIfStringIsBase64(s string) bool {
+	_, err := base64.StdEncoding.DecodeString(s)
+	return err == nil
 }
