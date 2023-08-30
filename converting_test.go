@@ -21,3 +21,13 @@ func TestVerifyIfStringIsBase64(t *testing.T) {
 	assert.Equal(isNotBase64, false)
 
 }
+
+func TestDecodeBase64String(t *testing.T) {
+
+	assert := assert.New(t)
+
+	decodedBase64String := DecodeBase64String("aGVsbG8K")
+
+	assert.Equal(decodedBase64String, "hello")
+
+}
