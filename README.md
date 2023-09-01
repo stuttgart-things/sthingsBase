@@ -1,5 +1,5 @@
 # sthingsBase
-module providing basic building blocks
+module which provides basic golang functions & building blocks
 
 ## IMPORT
 
