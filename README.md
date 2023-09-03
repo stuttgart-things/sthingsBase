@@ -1,4 +1,4 @@
-# sthingsBase
+# stuttgart-things/sthingsBase
 module which provides basic golang functions & building blocks
 
 ## IMPORT
