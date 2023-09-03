@@ -127,3 +127,11 @@ func WriteDataToFile(outputFilePath, outputData string) bool {
 
 	return true
 }
+
+func MoveRenameFileOnFS(oldLocation, newLocation string) {
+
+	err := os.Rename(oldLocation, newLocation)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
