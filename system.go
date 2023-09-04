@@ -6,6 +6,7 @@ package base
 
 import (
 	"log"
+	"os"
 	"os/exec"
 	"os/user"
 	"strings"
@@ -39,4 +40,19 @@ func GetExternalProcessOutputToVar(cmd string, args []string) string {
 
 	return b.String()
 
+}
+
+func SetUnixFilePermissions(filePath string, filePermission int) (filePermissionSet bool) {
+
+	osFilePermission := os.FileMode(int(filePermission))
+
+	err := os.Chmod(filePath, osFilePermission)
+
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		filePermissionSet = true
+	}
+
+	return filePermissionSet
 }
