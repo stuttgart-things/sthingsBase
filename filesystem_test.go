@@ -56,3 +56,37 @@ func TestReadFileToVariable(t *testing.T) {
 
 	assert.Equal(writtenText, "hello")
 }
+
+func TestCreateNestedDirectoryStructure(t *testing.T) {
+
+	assert := assert.New(t)
+
+	randomFolderName := GenerateRandomString(6)
+
+	CreateNestedDirectoryStructure("/tmp/"+randomFolderName, 0600)
+
+	folderExists, _ := VerifyIfFileOrDirExists("/tmp/"+randomFolderName, "dir")
+	assert.Equal(true, folderExists)
+
+}
+
+func TestRemoveNestedFolder(t *testing.T) {
+
+	var nestedFoldersRemoved bool
+
+	assert := assert.New(t)
+
+	randomFolderName := GenerateRandomString(6)
+
+	CreateNestedDirectoryStructure("/tmp/"+randomFolderName, 0600)
+
+	folderExists, _ := VerifyIfFileOrDirExists("/tmp/"+randomFolderName, "dir")
+
+	if folderExists {
+		RemoveNestedFolder("/tmp/" + randomFolderName)
+		nestedFoldersRemoved = true
+	}
+
+	assert.Equal(true, nestedFoldersRemoved)
+
+}

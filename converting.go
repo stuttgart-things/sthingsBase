@@ -6,9 +6,12 @@ package base
 
 import (
 	"encoding/base64"
+	"fmt"
 	"log"
+	"math/rand"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func ConvertIntegerToString(inputNumber int) (outputNumber string) {
@@ -51,4 +54,13 @@ func DecodeBase64String(base64Input string) string {
 	}
 
 	return strings.Trim(string(stringOutput), "\n")
+}
+
+func GenerateRandomString(length int) string {
+
+	rand.New(rand.NewSource(time.Now().UnixNano()))
+
+	b := make([]byte, length+2)
+	rand.Read(b)
+	return fmt.Sprintf("%x", b)[2 : length+2]
 }

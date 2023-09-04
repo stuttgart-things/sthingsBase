@@ -20,6 +20,14 @@ func CreateNestedDirectoryStructure(directoryStructure string, permission int) {
 
 }
 
+func RemoveNestedFolder(path string) {
+
+	err := os.RemoveAll(path)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
 func VerifyFileExistence(filePath string, log *Logger, exitOnError bool) bool {
 
 	exists := false
