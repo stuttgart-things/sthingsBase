@@ -19,7 +19,7 @@ func TestGetVariablesAndDefaultsFromTemplate(t *testing.T) {
 	{{ end }}
 	`
 
-	var wantTemplateVariablesAndDefaults = make(map[string]string)
+	var wantTemplateVariablesAndDefaults = make(map[string]interface{})
 	var wantPriority = make(map[int]string)
 	var wantAllConditions []TemplateCondtition
 	var elementArray []string

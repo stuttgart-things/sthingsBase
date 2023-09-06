@@ -43,10 +43,10 @@ func RenderTemplateInline(templateData, renderOption, delimStart, delimEnd strin
 	return buf.Bytes(), nil
 }
 
-func GetVariablesAndDefaultsFromTemplate(templateFileContent string, variableDelimiter string) (map[string]string, map[int]string, []TemplateCondtition, []string) {
+func GetVariablesAndDefaultsFromTemplate(templateFileContent string, variableDelimiter string) (map[string]interface{}, map[int]string, []TemplateCondtition, []string) {
 
 	var priority = make(map[int]string)
-	var allVariablesAndDefaults = make(map[string]string)
+	var allVariablesAndDefaults = make(map[string]interface{})
 	var alllConditionals []TemplateCondtition
 	var conditionalVariables []string
 	var allNoneConditionalVariables []string
