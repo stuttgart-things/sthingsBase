@@ -31,3 +31,23 @@ func TestDecodeBase64String(t *testing.T) {
 	assert.Equal(decodedBase64String, "hello")
 
 }
+
+func TestMergeMaps(t *testing.T) {
+
+	// WANTED RESULT
+	want := make(map[string]interface{})
+	want["ram"] = 4096
+	want["cpu"] = 4
+
+	// DEFINE TEST VALUES
+	defaultVariables := make(map[string]interface{})
+	envVariables := make(map[string]interface{})
+	defaultVariables["ram"] = 2048
+	defaultVariables["cpu"] = 4
+	envVariables["ram"] = 4096
+
+	// MERGE DEFAULTS + VALUES
+	got := MergeMaps(defaultVariables, envVariables)
+
+	assert.InDeltaMapValues(t, got, want, 0.0, "Word count wrong. Got %v, want %v", got, want)
+}
