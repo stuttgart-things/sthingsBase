@@ -51,3 +51,18 @@ func TestMergeMaps(t *testing.T) {
 
 	assert.InDeltaMapValues(t, got, want, 0.0, "Word count wrong. Got %v, want %v", got, want)
 }
+
+func TestUniqueSlice(t *testing.T) {
+
+	assert := assert.New(t)
+
+	wantStringSlice := []string{"abc", "cde", "efg"}
+	wantIntSlice := []int{1, 2, 3, 4}
+
+	resultStringSlice := UniqueSlice([]string{"abc", "cde", "efg", "efg", "abc", "cde"})
+	resultIntSlice := UniqueSlice([]int{1, 1, 2, 2, 3, 3, 4})
+
+	assert.Equal(wantStringSlice, resultStringSlice)
+	assert.Equal(wantIntSlice, resultIntSlice)
+
+}

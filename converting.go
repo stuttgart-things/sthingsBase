@@ -75,3 +75,15 @@ func MergeMaps[K comparable, V any](m1 map[K]V, m2 map[K]V) map[K]V {
 	}
 	return merged
 }
+
+func UniqueSlice[T comparable](s []T) []T {
+	inResult := make(map[T]bool)
+	var result []T
+	for _, str := range s {
+		if _, ok := inResult[str]; !ok {
+			inResult[str] = true
+			result = append(result, str)
+		}
+	}
+	return result
+}
