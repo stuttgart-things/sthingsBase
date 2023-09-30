@@ -76,6 +76,7 @@ func MergeMaps[K comparable, V any](m1 map[K]V, m2 map[K]V) map[K]V {
 	return merged
 }
 
+// Remove duplicates from any slice using Generics
 func UniqueSlice[T comparable](s []T) []T {
 	inResult := make(map[T]bool)
 	var result []T

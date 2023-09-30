@@ -56,3 +56,15 @@ func SetUnixFilePermissions(filePath string, filePermission int) (filePermission
 
 	return filePermissionSet
 }
+
+func ExecuteBashScript(scriptPath string) (output string) {
+
+	cmd, err := exec.Command("/bin/sh", scriptPath).Output()
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	output = string(cmd)
+	return
+}
