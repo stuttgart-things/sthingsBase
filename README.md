@@ -4,8 +4,8 @@ module which provides basic golang functions & building blocks
 ## IMPORT
 
 <details><summary>go.mod</summary>
-	
-```
+
+```go
 module github..
 go 1.20
 
@@ -19,20 +19,35 @@ require (
 </details>
 
 <details><summary>code.go</summary>
-	
-```
+
+```go
 package xy
 
 import (
   ..
   sthingsBase "github.com/stuttgart-things/sthingsBase"
   ..
-)	
+)
 ```
 
 </details>
 
 ## FUNCTIONS
+
+### VERIFICATION
+
+<details><summary>Check For String In Slice</summary>
+
+
+```go
+members := []string{"robbie", "marc", "gary"}
+check := "robbie"
+
+isIn := CheckForStringInSlice(members, check)
+```
+
+</details>
+
 
 ### CONVERTING
 
@@ -47,7 +62,7 @@ ConvertIntegerToString
   ```
   log := sthingsBase.StdOutFileLogger(logfilePath, "2006-01-02 15:04:05", 50, 3, 28)
   ..
-  log.Info("gRPC server running on port " + serverPort)  
+  log.Info("gRPC server running on port " + serverPort)
   ```
 </details>
 
@@ -85,16 +100,16 @@ ConvertIntegerToString
 ### TEMPLATING
 
 <details><summary>RenderTemplateInline</summary>
- 
+
   INPUT:
- 
+
   | templateData | renderOption | delimStart | delimEnd | templateVariables         |
   |--------------|--------------|------------|----------|------------------------   |
   | string       | string       | string     | string   | map[string]interface{}   |
-  | hello {{ .name }}   | "missingkey=zero"    | "{{"        |  "}}"     | vars:= map[string]interface{}{"name": "delicious",}                        
-  
+  | hello {{ .name }}   | "missingkey=zero"    | "{{"        |  "}}"     | vars:= map[string]interface{}{"name": "delicious",}
+
   OUTPUT:
- 
+
   | yamlBytes | err   |
   |-----------|-------|
   | []byte    | error |
@@ -104,17 +119,17 @@ ConvertIntegerToString
   ```
   ...
   yamlBytes, err := sthingsBase.RenderTemplateInline(
-	metaDataFile.template, 
-	"missingkey=zero", 
-	"{{", 
-	"}}", 
+	metaDataFile.template,
+	"missingkey=zero",
+	"{{",
+	"}}",
 	chartData)
-  
+
   if err != nil {
     log.Fatal(err)
   }
   ```
-  
+
 </details>
 
 TASKFILE
@@ -144,4 +159,3 @@ limitations under the License.
 Author Information
 ------------------
 Patrick Hermann, stuttgart-things 04/2023
-
