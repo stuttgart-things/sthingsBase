@@ -76,7 +76,7 @@ func MergeMaps[K comparable, V any](m1 map[K]V, m2 map[K]V) map[K]V {
 	return merged
 }
 
-// Remove duplicates from any slice using Generics
+// REMOVE DUPLICATES FROM ANY SLICE USING GENERICS
 func UniqueSlice[T comparable](s []T) []T {
 	inResult := make(map[T]bool)
 	var result []T
@@ -89,6 +89,7 @@ func UniqueSlice[T comparable](s []T) []T {
 	return result
 }
 
+// GET VALUES FROM STRING POINTER
 func GetStringPointerValue(s *string) string {
 	if s != nil {
 		return *s
