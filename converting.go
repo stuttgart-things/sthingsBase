@@ -88,3 +88,11 @@ func UniqueSlice[T comparable](s []T) []T {
 	}
 	return result
 }
+
+func GetStringPointerValue(s *string) string {
+	if s != nil {
+		return *s
+	}
+
+	return ""
+}
