@@ -97,3 +97,8 @@ func GetStringPointerValue(s *string) string {
 
 	return ""
 }
+
+// CONVERT STRING TO STRING POINTER
+func ConvertStringToPointer(s string) *string {
+	return &s
+}

@@ -66,3 +66,54 @@ func TestUniqueSlice(t *testing.T) {
 	assert.Equal(wantIntSlice, resultIntSlice)
 
 }
+
+func TestGetStringPointerValue(t *testing.T) {
+	assert := assert.New(t)
+
+	// Test when the input is a non-nil pointer
+	str := "test string"
+	strPtr := &str
+	result := GetStringPointerValue(strPtr)
+	assert.Equal(str, result, "GetStringPointerValue did not return the correct value for a non-nil pointer")
+
+	// Test when the input is a nil pointer
+	var nilPtr *string
+	result = GetStringPointerValue(nilPtr)
+	assert.Equal("", result, "GetStringPointerValue did not return the correct value for a nil pointer")
+}
+
+func TestConvertIntegerToString(t *testing.T) {
+	assert := assert.New(t)
+
+	result := ConvertIntegerToString(123)
+	assert.Equal("123", result, "ConvertIntegerToString did not convert correctly")
+}
+
+func TestConvertStringToInteger(t *testing.T) {
+	assert := assert.New(t)
+
+	result := ConvertStringToInteger("123")
+	assert.Equal(123, result, "ConvertStringToInteger did not convert correctly")
+}
+
+func TestConvertStringToBoolean(t *testing.T) {
+	assert := assert.New(t)
+
+	result := ConvertStringToBoolean("true")
+	assert.Equal(true, result, "ConvertStringToBoolean did not convert correctly")
+}
+
+func TestGenerateRandomString(t *testing.T) {
+	assert := assert.New(t)
+
+	result := GenerateRandomString(10)
+	assert.Equal(10, len(result), "GenerateRandomString did not generate string of correct length")
+}
+
+func TestConvertStringToPointer(t *testing.T) {
+	assert := assert.New(t)
+
+	str := "test string"
+	result := ConvertStringToPointer(str)
+	assert.Equal(&str, result, "ConvertStringToPointer did not return the correct pointer")
+}
