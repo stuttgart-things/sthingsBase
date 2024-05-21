@@ -11,7 +11,6 @@ import (
 )
 
 func CreateNestedDirectoryStructure(directoryStructure string, permission int) {
-
 	osModePermissions := os.FileMode(int(permission))
 
 	if err := os.MkdirAll(directoryStructure, osModePermissions); err != nil {
@@ -21,7 +20,6 @@ func CreateNestedDirectoryStructure(directoryStructure string, permission int) {
 }
 
 func RemoveNestedFolder(path string) {
-
 	err := os.RemoveAll(path)
 	if err != nil {
 		log.Fatal(err)
