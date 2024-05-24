@@ -5,6 +5,7 @@ Copyright © 2024 Patrick Hermann patrick.hermann@sva.de
 package base
 
 import (
+	"slices"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -116,4 +117,17 @@ func TestConvertStringToPointer(t *testing.T) {
 	str := "test string"
 	result := ConvertStringToPointer(str)
 	assert.Equal(&str, result, "ConvertStringToPointer did not return the correct pointer")
+}
+
+func TestGetRandomPickFromSlice(t *testing.T) {
+	// Define a slice of strings
+	slice := []string{"Hello", "World", "from", "Go"}
+
+	// Call the function
+	result := GetRandomPickFromSlice(slice)
+
+	// Check the result
+	if !slices.Contains(slice, result) {
+		t.Errorf("Expected 'World', got '%s'", result)
+	}
 }

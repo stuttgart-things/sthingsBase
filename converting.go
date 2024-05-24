@@ -102,3 +102,10 @@ func GetStringPointerValue(s *string) string {
 func ConvertStringToPointer(s string) *string {
 	return &s
 }
+
+// GET RANDOM ELEMENT FROM SLICE
+func GetRandomPickFromSlice(slice []string) string {
+	// GET RANDOM ELEMENT
+	randomIndex := rand.Intn(len(slice))
+	return slice[randomIndex]
+}
