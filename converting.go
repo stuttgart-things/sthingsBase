@@ -103,6 +103,11 @@ func ConvertStringToPointer(s string) *string {
 	return &s
 }
 
+// CONVERT BOOL TO BOOL POINTER
+func ConvertBoolToPointer(b bool) *bool {
+	return &b
+}
+
 // GET RANDOM ELEMENT FROM SLICE
 func GetRandomPickFromSlice(slice []string) string {
 	// GET RANDOM ELEMENT
